@@ -1,0 +1,135 @@
+{
+  "address": "0xB8C4b9793675F0F7533D41616cD770cB315712eA",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "VIEWFUNCTION",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "senderAddress",
+          "type": "address"
+        }
+      ],
+      "name": "sendEth",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferDetails",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "reciverAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "amount",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x056ddff2420f4599f15be167d61902c8fe490c024dd88f6e60ca70a34601616d",
+  "receipt": {
+    "to": null,
+    "from": "0x0a0179860323B23d990E71f7ee006238D8720179",
+    "contractAddress": "0xB8C4b9793675F0F7533D41616cD770cB315712eA",
+    "transactionIndex": 32,
+    "gasUsed": "222402",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x9a873b349f0b23d64527ebcc2cfb07d03e67864eb7b1e9487d32d5a4e0b85a17",
+    "transactionHash": "0x056ddff2420f4599f15be167d61902c8fe490c024dd88f6e60ca70a34601616d",
+    "logs": [],
+    "blockNumber": 3510980,
+    "cumulativeGasUsed": "9002692",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "1c155e1c7f58300f20a2d598c3b570e9",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"VIEWFUNCTION\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"senderAddress\",\"type\":\"address\"}],\"name\":\"sendEth\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"transferDetails\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"reciverAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"amount\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/wallet.sol\":\"wallet\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/wallet.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.7;\\n\\ncontract wallet{\\n    //state variables\\n    struct TransactionDetails{\\n        address reciverAddress;\\n        address amount;\\n    }\\n    TransactionDetails[] public transferDetails;\\n    \\n    //functions\\n    function sendEth(address senderAddress) public payable {\\n        payable(senderAddress).transfer(msg.value);\\n    }\\n    function VIEWFUNCTION() public view returns(uint256){\\n        return (10);\\n    }\\n\\n}\",\"keccak256\":\"0x2b45c39a578582556f8d14a8c0e804bccaf29d0b4cfcabbbc073265061529403\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610310806100206000396000f3fe6080604052600436106100345760003560e01c8063384d877a14610039578063721c302d1461006457806376a54c60146100a2575b600080fd5b34801561004557600080fd5b5061004e6100be565b60405161005b919061019e565b60405180910390f35b34801561007057600080fd5b5061008b600480360381019061008691906101ea565b6100c7565b604051610099929190610258565b60405180910390f35b6100bc60048036038101906100b791906102ad565b61013b565b005b6000600a905090565b600081815481106100d757600080fd5b90600052602060002090600202016000915090508060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905082565b8073ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f19350505050158015610181573d6000803e3d6000fd5b5050565b6000819050919050565b61019881610185565b82525050565b60006020820190506101b3600083018461018f565b92915050565b600080fd5b6101c781610185565b81146101d257600080fd5b50565b6000813590506101e4816101be565b92915050565b600060208284031215610200576101ff6101b9565b5b600061020e848285016101d5565b91505092915050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b600061024282610217565b9050919050565b61025281610237565b82525050565b600060408201905061026d6000830185610249565b61027a6020830184610249565b9392505050565b61028a81610237565b811461029557600080fd5b50565b6000813590506102a781610281565b92915050565b6000602082840312156102c3576102c26101b9565b5b60006102d184828501610298565b9150509291505056fea26469706673582212204c6bee028f2a3dc3385125a5d097817bfd8681cf183202b8cf2be3941b09daa964736f6c63430008080033",
+  "deployedBytecode": "0x6080604052600436106100345760003560e01c8063384d877a14610039578063721c302d1461006457806376a54c60146100a2575b600080fd5b34801561004557600080fd5b5061004e6100be565b60405161005b919061019e565b60405180910390f35b34801561007057600080fd5b5061008b600480360381019061008691906101ea565b6100c7565b604051610099929190610258565b60405180910390f35b6100bc60048036038101906100b791906102ad565b61013b565b005b6000600a905090565b600081815481106100d757600080fd5b90600052602060002090600202016000915090508060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905082565b8073ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f19350505050158015610181573d6000803e3d6000fd5b5050565b6000819050919050565b61019881610185565b82525050565b60006020820190506101b3600083018461018f565b92915050565b600080fd5b6101c781610185565b81146101d257600080fd5b50565b6000813590506101e4816101be565b92915050565b600060208284031215610200576101ff6101b9565b5b600061020e848285016101d5565b91505092915050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b600061024282610217565b9050919050565b61025281610237565b82525050565b600060408201905061026d6000830185610249565b61027a6020830184610249565b9392505050565b61028a81610237565b811461029557600080fd5b50565b6000813590506102a781610281565b92915050565b6000602082840312156102c3576102c26101b9565b5b60006102d184828501610298565b9150509291505056fea26469706673582212204c6bee028f2a3dc3385125a5d097817bfd8681cf183202b8cf2be3941b09daa964736f6c63430008080033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 10,
+        "contract": "contracts/wallet.sol:wallet",
+        "label": "transferDetails",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_array(t_struct(TransactionDetails)6_storage)dyn_storage"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_struct(TransactionDetails)6_storage)dyn_storage": {
+        "base": "t_struct(TransactionDetails)6_storage",
+        "encoding": "dynamic_array",
+        "label": "struct wallet.TransactionDetails[]",
+        "numberOfBytes": "32"
+      },
+      "t_struct(TransactionDetails)6_storage": {
+        "encoding": "inplace",
+        "label": "struct wallet.TransactionDetails",
+        "members": [
+          {
+            "astId": 3,
+            "contract": "contracts/wallet.sol:wallet",
+            "label": "reciverAddress",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address"
+          },
+          {
+            "astId": 5,
+            "contract": "contracts/wallet.sol:wallet",
+            "label": "amount",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address"
+          }
+        ],
+        "numberOfBytes": "64"
+      }
+    }
+  }
+}

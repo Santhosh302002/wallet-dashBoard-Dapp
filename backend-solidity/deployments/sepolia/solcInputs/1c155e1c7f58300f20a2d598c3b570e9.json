@@ -1,0 +1,35 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/wallet.sol": {
+      "content": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.7;\n\ncontract wallet{\n    //state variables\n    struct TransactionDetails{\n        address reciverAddress;\n        address amount;\n    }\n    TransactionDetails[] public transferDetails;\n    \n    //functions\n    function sendEth(address senderAddress) public payable {\n        payable(senderAddress).transfer(msg.value);\n    }\n    function VIEWFUNCTION() public view returns(uint256){\n        return (10);\n    }\n\n}"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
