@@ -11,8 +11,9 @@ contract wallet{
     TransactionDetails[] public transferDetails;
     
     //functions
-    function sendEth(address senderAddress) public payable {
-        payable(senderAddress).transfer(msg.value);
+    function sendEth(address payable senderAddress) public payable {
+        (bool sent, bytes memory data) = senderAddress.call{value: msg.value}("");
+        require(sent, "Failed to send Ether");
     }
     function VIEWFUNCTION() public view returns(uint256){
         return (10);
