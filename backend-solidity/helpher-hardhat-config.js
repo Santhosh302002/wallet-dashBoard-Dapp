@@ -1,7 +1,7 @@
 // const { ethers } = require("hardhat")
 
-const frontEndContractsFile = "../frontend-nextjs/constants/contractAddresses.json"
-const frontEndAbiFile = "../frontend-nextjs/constants/abi.json"
+const frontEndContractsFile = "../nextjs-smartcontract-lottery-fcc/constants/contractAddresses.json"
+const frontEndAbiFile = "../nextjs-smartcontract-lottery-fcc/constants/abi.json"
 
 module.exports = {
     frontEndContractsFile,
